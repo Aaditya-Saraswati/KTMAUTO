@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout title="Our Services - Kathmandu Automotive">
+  <Navbar />
+
+  <!-- HEADER -->
+  <section style="padding: 160px 80px 80px; background-color: #0a0a0a;">
+    <span style="color: #CC1F1F; font-size: 12px; letter-spacing: 4px; text-transform: uppercase;">What We Offer</span>
+    <h1 style="font-size: clamp(48px, 6vw, 90px); font-weight: 900; letter-spacing: -2px; margin-top: 16px; line-height: 1;">Our Services</h1>
+    <p style="color: rgba(255,255,255,0.5); font-size: 18px; margin-top: 24px; max-width: 600px; line-height: 1.7;">From routine maintenance to complex repairs — we handle everything across all makes and models.</p>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section style="padding: 40px 80px 120px; background-color: #0a0a0a;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2px; background-color: #1a1a1a;">
+      {[
+        { num: "01", title: "Logbook Servicing", desc: "Scheduled servicing based on your manufacturer's guidelines to keep your vehicle in top shape and maintain warranty compliance." },
+        { num: "02", title: "Essential Servicing", desc: "Routine maintenance that includes fluid top-ups and safety checks on brakes, steering, suspension, exhaust, and more — often referred to as a minor service." },
+        { num: "03", title: "Detail Servicing", desc: "A comprehensive inspection with a detailed report. We analyse the engine management system and recommend the necessary steps to ensure long-term reliability. Also known as a major service." },
+        { num: "04", title: "System Diagnosis & Repair", desc: "Using advanced diagnostic tools, we quickly identify issues by reading fault codes from your vehicle's ECU, ensuring accurate and effective repairs." },
+        { num: "05", title: "Cooling System Repairs", desc: "Full cooling system inspection and repair to prevent overheating, coolant leaks, and engine damage before they become costly problems." },
+        { num: "06", title: "Tyres & Wheel Alignment", desc: "Tyre fitting, balancing and precision wheel alignment for a smoother, safer, and more fuel-efficient drive." },
+        { num: "07", title: "Brakes", desc: "As your car's most critical safety system, brakes need regular care. Our specialists provide high-quality brake repairs and replacements to keep you safe on the road." },
+        { num: "08", title: "4WD Servicing", desc: "We offer specialised servicing for 4WD vehicles to handle tough terrains, fuel contamination, and other unique challenges — beyond what a standard service can provide." },
+        { num: "09", title: "Mechanical Repairs", desc: "From sluggish acceleration and fuel leaks to engine vibrations and more, we provide a wide range of mechanical repairs for all types of vehicles." },
+        { num: "10", title: "Batteries", desc: "Your car battery powers everything from the engine to essential accessories. We diagnose, service, and replace batteries to keep your vehicle reliable." },
+        { num: "11", title: "Exhaust Repairs", desc: "A healthy exhaust system is vital for performance and efficiency. Our technicians repair or replace faulty exhausts to restore smooth driving." },
+        { num: "12", title: "Shocks & Struts Replacement", desc: "We service and replace suspension components to ensure stability, comfort, and safety — helping you maintain full control on every drive." },
+        { num: "13", title: "eSafety Checks", desc: "Our authorised technicians perform roadworthy inspections and safety checks to ensure your vehicle meets all registration requirements." },
+        { num: "14", title: "Clutch Repairs", desc: "We repair and replace clutch systems, restoring smooth gear shifts and efficient power transfer for an improved driving experience." },
+      ].map((service) => (
+        <div class="service-card" style="background-color: #111111; padding: 48px 40px; cursor: pointer; transition: all 0.3s ease; border-left: 3px solid transparent;">
+          <span style="color: #CC1F1F; font-size: 13px; font-weight: 700; letter-spacing: 2px;">{service.num}</span>
+          <h3 style="font-size: 20px; font-weight: 700; margin-top: 16px; margin-bottom: 12px;">{service.title}</h3>
+          <p style="color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.8;">{service.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align: center; margin-top: 80px;">
+      <p style="color: rgba(255,255,255,0.5); font-size: 16px; margin-bottom: 32px;">Ready to book? Choose your nearest location below.</p>
+      <a href="https://mechanicdesk.com.au/online-booking/index.html?token=1fa11c765309ae5bbac01ee7a0be93fcdc853c50" target="_blank" style="background-color: #CC1F1F; color: white; text-decoration: none; padding: 18px 48px; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px;">Book an Appointment</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color: #0a0a0a; border-top: 1px solid #1a1a1a; padding: 60px 80px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 32px;">
+      <div>
+        <img src="/logo.png" alt="Kathmandu Automotive" style="height: 60px; filter: brightness(0) invert(1); margin-bottom: 16px;" />
+        <p style="color: rgba(255,255,255,0.4); font-size: 14px; max-width: 300px; line-height: 1.7;">Premium auto repair and servicing across Sydney, Canberra and Melbourne.</p>
+      </div>
+      <div style="display: flex; gap: 60px;">
+        <div>
+          <div style="color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;">Navigation</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="/" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Home</a>
+            <a href="/about" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">About Us</a>
+            <a href="/services" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Services</a>
+            <a href="/contact" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div style="color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;">Contact</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="tel:1300604251" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">1300 604 251</a>
+            <a href="mailto:info@kathmanduautomotive.net" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">info@kathmanduautomotive.net</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #1a1a1a; margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between;">
+      <p style="color: rgba(255,255,255,0.3); font-size: 13px;">© 2026 Kathmandu Automotive. All rights reserved.</p>
+      <p style="color: rgba(255,255,255,0.3); font-size: 13px;">1300 604 251</p>
+    </div>
+  </footer>
+
+</Layout>
+
+<style>
+  .service-card:hover {
+    background-color: #1a1a1a !important;
+    border-left: 3px solid #CC1F1F !important;
+    transform: translateY(-4px);
+  }
+</style>

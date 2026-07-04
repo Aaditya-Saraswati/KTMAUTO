@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout title="About Us - Kathmandu Automotive">
+  <Navbar />
+
+  <!-- PAGE HEADER -->
+  <section style="padding: 160px 80px 80px; background-color: #0a0a0a; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: linear-gradient(to left, rgba(204,31,31,0.05), transparent); z-index: 0;"></div>
+    <div style="position: relative; z-index: 1;">
+      <span style="color: #CC1F1F; font-size: 12px; letter-spacing: 4px; text-transform: uppercase;">Who We Are</span>
+      <h1 style="font-size: clamp(48px, 6vw, 90px); font-weight: 900; letter-spacing: -2px; margin-top: 16px; line-height: 1;">About Us</h1>
+    </div>
+  </section>
+
+  <!-- MAIN ABOUT -->
+  <section style="padding: 80px 80px 120px; background-color: #0a0a0a; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+    
+    <div>
+      <h2 style="font-size: clamp(28px, 3vw, 44px); font-weight: 900; letter-spacing: -1px; margin-bottom: 24px; line-height: 1.1;">Precision Repairs.<br/>Reliable Service.<br/><span style="color: #CC1F1F;">Local Expertise.</span></h2>
+      <p style="color: rgba(255,255,255,0.6); font-size: 16px; line-height: 1.9; margin-bottom: 24px;">Kathmandu Automotive is your trusted destination for complete vehicle care and repair services across Australia. With skilled mechanics, modern tools, and a commitment to quality, we provide reliable solutions for all makes and models.</p>
+      <p style="color: rgba(255,255,255,0.6); font-size: 16px; line-height: 1.9; margin-bottom: 48px;">From routine maintenance to complex repairs, our goal is to keep your vehicle running smoothly and safely. We value honesty, efficiency, and customer satisfaction — delivering service you can count on every time.</p>
+      <a href="https://mechanicdesk.com.au/online-booking/index.html?token=1fa11c765309ae5bbac01ee7a0be93fcdc853c50" target="_blank" style="background-color: #CC1F1F; color: white; text-decoration: none; padding: 16px 36px; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px;">Book an Appointment</a>
+    </div>
+
+    <div style="position: relative;">
+      <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80" alt="Mechanic working" style="width: 100%; border-radius: 8px; object-fit: cover; aspect-ratio: 4/5;" />
+      <div style="position: absolute; top: -20px; right: -20px; background-color: #CC1F1F; padding: 28px; border-radius: 8px; text-align: center;">
+        <div style="font-size: 40px; font-weight: 900;">5</div>
+        <div style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px;">Locations</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- STATS -->
+  <section style="background-color: #CC1F1F; padding: 80px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center;">
+    {[
+      { num: "5", label: "Locations" },
+      { num: "3", label: "Major Cities" },
+      { num: "14+", label: "Services Offered" },
+      { num: "100%", label: "Satisfaction Focused" },
+    ].map((stat) => (
+      <div>
+        <div style="font-size: 56px; font-weight: 900; letter-spacing: -2px;">{stat.num}</div>
+        <div style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.8; margin-top: 8px;">{stat.label}</div>
+      </div>
+    ))}
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section style="padding: 120px 80px; background-color: #111111;">
+    <div style="text-align: center; margin-bottom: 80px;">
+      <span style="color: #CC1F1F; font-size: 12px; letter-spacing: 4px; text-transform: uppercase;">Our Values</span>
+      <h2 style="font-size: clamp(32px, 3.5vw, 52px); font-weight: 900; margin-top: 16px; letter-spacing: -1px;">Why Choose Kathmandu Automotive?</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; background-color: #1a1a1a;">
+      {[
+        { title: "Experienced Mechanics", desc: "Our team consists of skilled and certified technicians with years of hands-on experience handling all makes and models." },
+        { title: "Modern Tools & Technology", desc: "We use advanced diagnostic equipment and high-quality tools to ensure precise repairs and servicing every time." },
+        { title: "Transparent Pricing", desc: "No surprises. We provide clear quotes before any work begins so you're always in control of your budget." },
+        { title: "All Makes & Models", desc: "Whether you drive a hatchback, SUV, 4WD, or luxury vehicle — our team has the expertise to service it." },
+        { title: "5 Convenient Locations", desc: "Across Sydney, Canberra and Melbourne — there's always a Kathmandu Automotive near you." },
+        { title: "Customer First Always", desc: "Every vehicle that enters our workshop receives the attention it deserves. We build relationships, not just repair cars." },
+      ].map((item) => (
+        <div class="value-card" style="background-color: #111111; padding: 48px 40px; transition: all 0.3s; border-left: 3px solid transparent;">
+          <div style="width: 40px; height: 3px; background-color: #CC1F1F; margin-bottom: 24px;"></div>
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">{item.title}</h3>
+          <p style="color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.8;">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color: #0a0a0a; border-top: 1px solid #1a1a1a; padding: 60px 80px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 32px;">
+      <div>
+        <img src="/logo.png" alt="Kathmandu Automotive" style="height: 60px; filter: brightness(0) invert(1); margin-bottom: 16px;" />
+        <p style="color: rgba(255,255,255,0.4); font-size: 14px; max-width: 300px; line-height: 1.7;">Premium auto repair and servicing across Sydney, Canberra and Melbourne.</p>
+      </div>
+      <div style="display: flex; gap: 60px; flex-wrap: wrap;">
+        <div>
+          <div style="color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;">Navigation</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="/" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Home</a>
+            <a href="/about" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">About Us</a>
+            <a href="/services" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Services</a>
+            <a href="/contact" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div style="color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;">Contact</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="tel:1300604251" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">1300 604 251</a>
+            <a href="mailto:info@kathmanduautomotive.net" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">info@kathmanduautomotive.net</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #1a1a1a; margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between;">
+      <p style="color: rgba(255,255,255,0.3); font-size: 13px;">© 2026 Kathmandu Automotive. All rights reserved.</p>
+      <p style="color: rgba(255,255,255,0.3); font-size: 13px;">1300 604 251</p>
+    </div>
+  </footer>
+
+</Layout>
+
+<style>
+  .value-card:hover {
+    background-color: #1a1a1a !important;
+    border-left: 3px solid #CC1F1F !important;
+  }
+</style>

@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout title="Contact Us - Kathmandu Automotive">
+  <Navbar />
+
+  <!-- PAGE HEADER -->
+  <section style="padding: 160px 80px 80px; background-color: #0a0a0a;">
+    <span style="color: #CC1F1F; font-size: 12px; letter-spacing: 4px; text-transform: uppercase;">Get In Touch</span>
+    <h1 style="font-size: clamp(48px, 6vw, 90px); font-weight: 900; letter-spacing: -2px; margin-top: 16px; line-height: 1;">Contact Us</h1>
+  </section>
+
+  <!-- CONTACT GRID -->
+  <section style="padding: 40px 80px 120px; background-color: #0a0a0a; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;">
+
+    <!-- LEFT: Info -->
+    <div>
+      <p style="color: rgba(255,255,255,0.6); font-size: 16px; line-height: 1.9; margin-bottom: 48px;">After you submit the form, a representative will call you back with the information. For urgent inquiries, call us directly on <a href="tel:1300604251" style="color: #CC1F1F; text-decoration: none; font-weight: 600;">1300 604 251</a>.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 32px;">
+        <div style="border-left: 3px solid #CC1F1F; padding-left: 24px;">
+          <div style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px;">Phone</div>
+          <a href="tel:1300604251" style="font-size: 24px; font-weight: 700; color: white; text-decoration: none;">1300 604 251</a>
+        </div>
+        <div style="border-left: 3px solid #CC1F1F; padding-left: 24px;">
+          <div style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px;">Email</div>
+          <a href="mailto:info@kathmanduautomotive.net" style="font-size: 18px; font-weight: 500; color: white; text-decoration: none;">info@kathmanduautomotive.net</a>
+        </div>
+        <div style="border-left: 3px solid #CC1F1F; padding-left: 24px;">
+          <div style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px;">Book Online</div>
+          <a href="https://mechanicdesk.com.au/online-booking/index.html?token=1fa11c765309ae5bbac01ee7a0be93fcdc853c50" target="_blank" style="font-size: 18px; font-weight: 500; color: #CC1F1F; text-decoration: none;">Open Booking System →</a>
+        </div>
+      </div>
+
+      <!-- Locations quick list -->
+      <div style="margin-top: 60px;">
+        <div style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 24px;">Our Locations</div>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          {[
+            { name: "Sydney (Haberfield)", address: "273 Paramatta Road, Haberfield NSW 2045" },
+            { name: "Fyshwick ACT", address: "42 Barrier St, Fyshwick ACT 2609" },
+            { name: "Mitchell ACT", address: "Shop 3/36 Grimwade St, Mitchell ACT 2911" },
+            { name: "Phillip ACT", address: "4 Bellona Court, Phillip ACT 2606" },
+            { name: "Melbourne (Epping)", address: "5 View Rd, Epping VIC 3076" },
+          ].map((loc) => (
+            <div style="display: flex; gap: 16px; align-items: flex-start;">
+              <div style="width: 6px; height: 6px; background-color: #CC1F1F; border-radius: 50%; margin-top: 7px; flex-shrink: 0;"></div>
+              <div>
+                <div style="font-size: 14px; font-weight: 600;">{loc.name}</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 2px;">{loc.address}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Form -->
+    <div style="background-color: #111111; padding: 56px 48px; border-radius: 8px; border: 1px solid #1a1a1a;">
+      <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 8px;">Send Us a Message</h2>
+      <p style="color: rgba(255,255,255,0.4); font-size: 14px; margin-bottom: 40px;">We'll get back to you within 24 hours.</p>
+
+      <div id="contact-form" style="display: flex; flex-direction: column; gap: 24px;">
+        
+        <div>
+          <label style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 10px;">Your Name *</label>
+          <input id="name" type="text" placeholder="John Smith" style="width: 100%; background-color: #1a1a1a; border: 1px solid #2a2a2a; color: white; padding: 14px 18px; font-size: 15px; border-radius: 4px; outline: none; transition: border-color 0.2s; font-family: inherit;" />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div>
+            <label style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 10px;">Email *</label>
+            <input id="email" type="email" placeholder="john@email.com" style="width: 100%; background-color: #1a1a1a; border: 1px solid #2a2a2a; color: white; padding: 14px 18px; font-size: 15px; border-radius: 4px; outline: none; font-family: inherit;" />
+          </div>
+          <div>
+            <label style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 10px;">Phone *</label>
+            <input id="phone" type="tel" placeholder="04xx xxx xxx" style="width: 100%; background-color: #1a1a1a; border: 1px solid #2a2a2a; color: white; padding: 14px 18px; font-size: 15px; border-radius: 4px; outline: none; font-family: inherit;" />
+          </div>
+        </div>
+
+        <div>
+          <label style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 10px;">Your Message *</label>
+          <textarea id="message" rows="5" placeholder="Describe your issue or inquiry..." style="width: 100%; background-color: #1a1a1a; border: 1px solid #2a2a2a; color: white; padding: 14px 18px; font-size: 15px; border-radius: 4px; outline: none; resize: vertical; font-family: inherit;"></textarea>
+        </div>
+
+        <button id="submit-btn" style="background-color: #CC1F1F; color: white; border: none; padding: 18px 40px; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: background 0.2s; font-family: inherit;">
+          Send Message
+        </button>
+
+        <div id="success-msg" style="display: none; background-color: #1a2a1a; border: 1px solid #2a4a2a; color: #4ade80; padding: 16px 20px; border-radius: 4px; font-size: 14px;">
+          ✓ Message sent! We'll get back to you within 24 hours.
+        </div>
+
+        <div id="error-msg" style="display: none; background-color: #2a1a1a; border: 1px solid #4a2a2a; color: #f87171; padding: 16px 20px; border-radius: 4px; font-size: 14px;">
+          ✗ Something went wrong. Please call us on 1300 604 251.
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color: #0a0a0a; border-top: 1px solid #1a1a1a; padding: 60px 80px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 32px;">
+      <div>
+        <img src="/logo.png" alt="Kathmandu Automotive" style="height: 60px; filter: brightness(0) invert(1); margin-bottom: 16px;" />
+        <p style="color: rgba(255,255,255,0.4); font-size: 14px; max-width: 300px; line-height: 1.7;">Premium auto repair and servicing across Sydney, Canberra and Melbourne.</p>
+      </div>
+      <div style="display: flex; gap: 60px;">
+        <div>
+          <div style="color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;">Navigation</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="/" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Home</a>
+            <a href="/about" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">About Us</a>
+            <a href="/services" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Services</a>
+            <a href="/contact" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div style="color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;">Contact</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="tel:1300604251" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">1300 604 251</a>
+            <a href="mailto:info@kathmanduautomotive.net" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">info@kathmanduautomotive.net</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #1a1a1a; margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between;">
+      <p style="color: rgba(255,255,255,0.3); font-size: 13px;">© 2026 Kathmandu Automotive. All rights reserved.</p>
+      <p style="color: rgba(255,255,255,0.3); font-size: 13px;">1300 604 251</p>
+    </div>
+  </footer>
+
+</Layout>
+
+<script>
+  import emailjs from '@emailjs/browser';
+
+  emailjs.init('WzU1SLKyPgRXH12Zp');
+
+  const btn = document.getElementById('submit-btn');
+  btn?.addEventListener('click', async () => {
+    const name = (document.getElementById('name') as HTMLInputElement)?.value;
+    const email = (document.getElementById('email') as HTMLInputElement)?.value;
+    const phone = (document.getElementById('phone') as HTMLInputElement)?.value;
+    const message = (document.getElementById('message') as HTMLTextAreaElement)?.value;
+
+    if (!name || !email || !phone || !message) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    btn.textContent = 'Sending...';
+    (btn as HTMLButtonElement).disabled = true;
+    btn.style.opacity = '0.7';
+
+    try {
+  await emailjs.send('service_0wqbanf', 'template_p2mkbol', {
+    name,
+    email,
+    phone,
+    message,
+    title: `New inquiry from ${name}`,
+  });
+  document.getElementById('success-msg')!.style.display = 'block';
+  btn.style.display = 'none';
+
+  setTimeout(() => {
+    (document.getElementById('name') as HTMLInputElement).value = '';
+    (document.getElementById('email') as HTMLInputElement).value = '';
+    (document.getElementById('phone') as HTMLInputElement).value = '';
+    (document.getElementById('message') as HTMLTextAreaElement).value = '';
+    document.getElementById('success-msg')!.style.display = 'none';
+    btn.style.display = 'block';
+    btn.textContent = 'Send Message';
+    (btn as HTMLButtonElement).disabled = false;
+    btn.style.opacity = '1';
+  }, 3000);
+
+} catch (err) {
+      document.getElementById('error-msg')!.style.display = 'block';
+      btn.textContent = 'Send Message';
+      (btn as HTMLButtonElement).disabled = false;
+      btn.style.opacity = '1';
+    }
+  });
+</script>
+</script>

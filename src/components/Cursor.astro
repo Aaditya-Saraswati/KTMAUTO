@@ -1,0 +1,33 @@
+---
+---
+<div id="cursor-dot" style="width: 8px; height: 8px; background-color: #CC1F1F; border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: transform 0.1s;"></div>
+<div id="cursor-ring" style="width: 36px; height: 36px; border: 1px solid rgba(204,31,31,0.5); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: all 0.12s ease;"></div>
+
+<script>
+  const dot = document.getElementById('cursor-dot')!;
+  const ring = document.getElementById('cursor-ring')!;
+
+  window.addEventListener('mousemove', (e) => {
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+    
+    setTimeout(() => {
+      ring.style.left = e.clientX + 'px';
+      ring.style.top = e.clientY + 'px';
+    }, 80);
+  });
+
+  // Scale up on hoverable elements
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      ring.style.transform = 'translate(-50%, -50%) scale(2.5)';
+      ring.style.borderColor = 'rgba(204,31,31,0.8)';
+      dot.style.transform = 'translate(-50%, -50%) scale(0)';
+    });
+    el.addEventListener('mouseleave', () => {
+      ring.style.transform = 'translate(-50%, -50%) scale(1)';
+      ring.style.borderColor = 'rgba(204,31,31,0.5)';
+      dot.style.transform = 'translate(-50%, -50%) scale(1)';
+    });
+  });
+</script>

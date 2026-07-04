@@ -1,0 +1,388 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout>
+  <Navbar />
+  
+  <!-- HERO SECTION -->
+  <!-- HERO SECTION -->
+<section id="hero" style="position: relative; height: 100vh; width: 100%; overflow: hidden; display: flex; align-items: flex-end; padding: 0 80px 80px;">
+
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+    <source src="/hero-bg.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Dark Overlay -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%); z-index: 1;"></div>
+
+  <!-- Big Typography -->
+  <div style="position: relative; z-index: 2; width: 100%;">
+    
+    <div style="overflow: hidden; margin-bottom: -10px;">
+      <h1 id="hero-line1" style="font-size: clamp(72px, 11vw, 160px); font-weight: 900; letter-spacing: -4px; line-height: 0.95; transform: translateY(100%); opacity: 0;">Your Car.</h1>
+    </div>
+    <div style="overflow: hidden; margin-bottom: -10px;">
+      <h1 id="hero-line2" style="font-size: clamp(72px, 11vw, 160px); font-weight: 900; letter-spacing: -4px; line-height: 0.95; transform: translateY(100%); opacity: 0; color: #CC1F1F;">Our Craft.</h1>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 40px;">
+      <div id="hero-sub" style="opacity: 0; transform: translateY(20px);">
+        <p style="color: rgba(255,255,255,0.5); font-size: 15px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px;">5 Locations · Sydney · Canberra · Melbourne</p>
+        <a href="https://mechanicdesk.com.au/online-booking/index.html?token=1fa11c765309ae5bbac01ee7a0be93fcdc853c50" target="_blank" style="background-color: #CC1F1F; color: white; text-decoration: none; padding: 16px 40px; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; border-radius: 2px;">Book Now</a>
+      </div>
+      <div id="hero-scroll" style="opacity: 0; text-align: right;">
+        <p style="color: rgba(255,255,255,0.3); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; writing-mode: vertical-rl;">scroll to explore</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+    
+    <!-- Video Background -->
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;"
+    >
+      <source src="/hero-bg.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Dark Overlay -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.85) 50%, rgba(0,0,0,0.3) 100%); z-index: 1;"></div>
+
+    <!-- Content -->
+    <div id="hero-content" style="position: relative; z-index: 2; padding: 0 80px; max-width: 750px;">
+      
+      <div id="hero-tag" style="display: inline-block; border: 1px solid #CC1F1F; color: #CC1F1F; padding: 6px 16px; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 32px; opacity: 0; transform: translateY(20px);">
+        Premium Auto Services · Australia
+      </div>
+
+      <h1 id="hero-title" style="font-size: clamp(42px, 6vw, 80px); font-weight: 900; line-height: 1.05; letter-spacing: -1px; margin-bottom: 24px; opacity: 0; transform: translateY(30px);">
+        From Routine<br/>
+        Service to<br/>
+        <span style="color: #CC1F1F;">Major Repairs.</span>
+      </h1>
+
+      <p id="hero-sub" style="font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 48px; max-width: 500px; opacity: 0; transform: translateY(20px);">
+        Skilled mechanics, modern tools, and a commitment to quality across 5 locations in Sydney, Canberra and Melbourne.
+      </p>
+
+      <div id="hero-btns" style="display: flex; gap: 20px; align-items: center; opacity: 0; transform: translateY(20px);">
+        <a href="https://mechanicdesk.com.au/online-booking/index.html?token=1fa11c765309ae5bbac01ee7a0be93fcdc853c50" target="_blank" style="background-color: #CC1F1F; color: white; text-decoration: none; padding: 16px 36px; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; transition: all 0.3s;">
+          Book an Appointment
+        </a>
+        <a href="/services" style="color: white; text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 4px;">
+          Our Services →
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom bar with locations -->
+    <div id="hero-locations" style="position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5); backdrop-filter: blur(10px); padding: 20px 80px; display: flex; gap: 48px; opacity: 0;">
+      <span style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4);">Our Locations</span>
+      <span style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7);">Haberfield, Sydney</span>
+      <span style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7);">Fyshwick, ACT</span>
+      <span style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7);">Mitchell, ACT</span>
+      <span style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7);">4 Bellona Court, Phillip ACT</span>
+      <span style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7);">Epping, Melbourne</span>
+    </div>
+
+  </section>
+<!-- SERVICES SECTION -->
+<section style="background-color: #0a0a0a; padding: 120px 80px;">
+  
+  <div style="text-align: center; margin-bottom: 80px;">
+    <span style="color: #CC1F1F; font-size: 12px; letter-spacing: 4px; text-transform: uppercase;">What We Do</span>
+    <h2 style="font-size: clamp(36px, 4vw, 60px); font-weight: 900; margin-top: 16px; letter-spacing: -1px;">Our Services</h2>
+    <p style="color: rgba(255,255,255,0.5); font-size: 16px; margin-top: 16px; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.7;">From routine maintenance to complex repairs — we handle it all.</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2px; background-color: #1a1a1a;">
+    
+    {[
+      { num: "01", title: "Logbook Servicing", desc: "Scheduled servicing based on manufacturer guidelines to maintain warranty compliance." },
+      { num: "02", title: "Essential Servicing", desc: "Routine maintenance including fluid top-ups and safety checks on brakes, steering and suspension." },
+      { num: "03", title: "Detail Servicing", desc: "Comprehensive inspection with a detailed report — also known as a major service." },
+      { num: "04", title: "System Diagnosis & Repair", desc: "Advanced diagnostic tools to quickly identify issues by reading fault codes from your vehicle's ECU." },
+      { num: "05", title: "Cooling System Repairs", desc: "Full cooling system inspection and repair to prevent overheating and engine damage." },
+      { num: "06", title: "Tyres & Wheel Alignment", desc: "Tyre fitting, balancing and precision wheel alignment for a smoother, safer drive." },
+      { num: "07", title: "Brakes", desc: "High-quality brake repairs and replacements to keep your car's most critical safety system in top shape." },
+      { num: "08", title: "4WD Servicing", desc: "Specialised servicing for 4WD vehicles to handle tough terrains and unique challenges." },
+      { num: "09", title: "Mechanical Repairs", desc: "Wide range of mechanical repairs for all vehicle types — from fuel leaks to engine vibrations." },
+      { num: "10", title: "Batteries", desc: "Battery diagnostics, servicing and replacement to keep your vehicle reliable." },
+      { num: "11", title: "Exhaust Repairs", desc: "Repair or replace faulty exhausts to restore smooth driving and fuel efficiency." },
+      { num: "12", title: "Shocks & Struts", desc: "Suspension component servicing and replacement for stability and comfort on every drive." },
+      { num: "13", title: "eSafety Checks", desc: "Authorised roadworthy inspections to ensure your vehicle meets all registration requirements." },
+      { num: "14", title: "Clutch Repairs", desc: "Clutch system repair and replacement for smooth gear shifts and efficient power transfer." },
+    ].map((service) => (
+      <div class="service-card" style="background-color: #111111; padding: 48px 40px; cursor: pointer; transition: all 0.3s ease; border-left: 3px solid transparent;">
+        <span style="color: #CC1F1F; font-size: 13px; font-weight: 700; letter-spacing: 2px;">{service.num}</span>
+        <h3 style="font-size: 20px; font-weight: 700; margin-top: 16px; margin-bottom: 12px;">{service.title}</h3>
+        <p style="color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.7;">{service.desc}</p>
+      </div>
+    ))}
+
+  </div>
+
+  <div style="text-align: center; margin-top: 60px;">
+    <a href="https://mechanicdesk.com.au/online-booking/index.html?token=1fa11c765309ae5bbac01ee7a0be93fcdc853c50" target="_blank" style="background-color: #CC1F1F; color: white; text-decoration: none; padding: 16px 40px; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px;">
+      Book a Service
+    </a>
+  </div>
+<!-- WHY CHOOSE US -->
+<section style="padding: 120px 80px; background-color: #111111; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+  
+  <div>
+    <span style="color: #CC1F1F; font-size: 12px; letter-spacing: 4px; text-transform: uppercase;">Why Us</span>
+    <h2 style="font-size: clamp(32px, 3.5vw, 52px); font-weight: 900; margin-top: 16px; margin-bottom: 24px; letter-spacing: -1px;">Your vehicle deserves expert care.</h2>
+    <p style="color: rgba(255,255,255,0.5); font-size: 16px; line-height: 1.8; margin-bottom: 48px;">Our commitment goes beyond simple repairs — we deliver trustworthy, efficient, and long-lasting automotive solutions that give you complete peace of mind.</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 32px;">
+      {[
+        { title: "Experienced Mechanics", desc: "Skilled and certified technicians with years of hands-on experience across all makes and models." },
+        { title: "Modern Tools & Technology", desc: "Advanced diagnostic equipment and high-quality tools for precise repairs every time." },
+        { title: "Comprehensive Services", desc: "From logbook servicing to 4WD care — everything under one roof across 5 locations." },
+        { title: "Transparent Pricing", desc: "No hidden costs. We explain everything before we start so you're always in control." },
+      ].map((item) => (
+        <div class="value-point" style="display: flex; gap: 20px; align-items: flex-start;">
+          <div style="width: 10px; height: 10px; background-color: #CC1F1F; border-radius: 50%; margin-top: 6px; flex-shrink: 0;"></div>
+          <div>
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 6px;">{item.title}</h4>
+            <p style="color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.7;">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div style="position: relative;">
+    <div style="background-color: #1a1a1a; border-radius: 8px; overflow: hidden; aspect-ratio: 4/5;">
+      <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&q=80" alt="Mechanic at work" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" />
+    </div>
+    <div style="position: absolute; bottom: -30px; left: -30px; background-color: #CC1F1F; padding: 32px; border-radius: 8px;">
+      <div style="font-size: 48px; font-weight: 900; line-height: 1;">5</div>
+      <div style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; opacity: 0.9;">Locations</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="padding: 120px 80px; background-color: #0a0a0a; text-align: center;">
+  
+  <span style="color: #CC1F1F; font-size: 12px; letter-spacing: 4px; text-transform: uppercase;">Reviews</span>
+  <h2 style="font-size: clamp(32px, 3.5vw, 52px); font-weight: 900; margin-top: 16px; margin-bottom: 16px; letter-spacing: -1px;">What Our Customers Say</h2>
+  <p style="color: rgba(255,255,255,0.5); margin-bottom: 64px; font-size: 16px;">Rated Excellent on Google across all locations.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+    {[
+      { name: "Subas Subedi", review: "I had a truly wonderful experience at Kathmandu Automotive Workshop. Even though my car is still under the manufacturer's warranty, I decided to come here and I'm so glad I did.", rating: 5 },
+      { name: "Pankaj Shehzad", review: "Last minute help. Thank you so much for helping me even it was a last minute call. That car will certainly come for its next servicing in Kathmandu Automotive.", rating: 5 },
+      { name: "Mia O'Hara", review: "Really impressed with this business. Thorough, friendly, good judgement on repairs and reasonable prices. Would highly recommend.", rating: 5 },
+    ].map((t) => (
+     <div class="testimonial-card" style="background-color: #111111; padding: 40px 32px; border-radius: 8px; text-align: left; border: 1px solid #1a1a1a;">
+        <div style="display: flex; gap: 4px; margin-bottom: 20px;">
+          {"★★★★★".split("").map(() => <span style="color: #CC1F1F; font-size: 18px;">★</span>)}
+        </div>
+        <p style="color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">"{t.review}"</p>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #CC1F1F; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">{t.name[0]}</div>
+          <div>
+            <div style="font-weight: 600; font-size: 14px;">{t.name}</div>
+            <div style="color: rgba(255,255,255,0.4); font-size: 12px;">Google Review</div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+</section>
+
+<!-- LOCATIONS -->
+<section style="padding: 120px 80px; background-color: #111111;">
+  <div style="text-align: center; margin-bottom: 64px;">
+    <span style="color: #CC1F1F; font-size: 12px; letter-spacing: 4px; text-transform: uppercase;">Find Us</span>
+    <h2 style="font-size: clamp(32px, 3.5vw, 52px); font-weight: 900; margin-top: 16px; letter-spacing: -1px;">Our Locations</h2>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+    {[
+      { name: "Sydney", suburb: "Haberfield, NSW", address: "273 Paramatta Road, Haberfield NSW 2045", email: "sydney@kathmanduautomotive.net" },
+      { name: "Fyshwick", suburb: "ACT", address: "42 Barrier St, Fyshwick ACT 2609", email: "fyshwick@kathmanduautomotive.net" },
+      { name: "Mitchell", suburb: "ACT", address: "Shop 3/36 Grimwade St, Mitchell ACT 2911", email: "mitchell@kathmanduautomotive.net" },
+      { name: "Phillip", suburb: "ACT", address: "Phillip ACT", email: "info@kathmanduautomotive.net" },
+      { name: "Melbourne", suburb: "Epping, VIC", address: "5 View Rd, Epping VIC 3076", email: "melbourne@kathmanduautomotive.net" },
+    ].map((loc) => (
+      <div style="background-color: #0a0a0a; padding: 40px 32px; border-radius: 8px; border: 1px solid #1a1a1a; transition: border-color 0.3s;" class="loc-card">
+        <div style="color: #CC1F1F; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px;">{loc.suburb}</div>
+        <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 20px;">{loc.name}</h3>
+        <p style="color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.7; margin-bottom: 12px;">{loc.address}</p>
+        <p style="color: rgba(255,255,255,0.4); font-size: 13px; margin-bottom: 28px;">{loc.email}</p>
+        <a href="https://mechanicdesk.com.au/online-booking/index.html?token=1fa11c765309ae5bbac01ee7a0be93fcdc853c50" target="_blank" style="color: #CC1F1F; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #CC1F1F; padding-bottom: 4px;">Book Here →</a>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background-color: #0a0a0a; border-top: 1px solid #1a1a1a; padding: 60px 80px;">
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 32px;">
+    <div>
+      <img src="/logo.png" alt="Kathmandu Automotive" style="height: 60px; filter: brightness(0) invert(1); margin-bottom: 16px;" />
+      <p style="color: rgba(255,255,255,0.4); font-size: 14px; max-width: 300px; line-height: 1.7;">Premium auto repair and servicing across Sydney, Canberra and Melbourne.</p>
+    </div>
+    <div style="display: flex; gap: 60px; flex-wrap: wrap;">
+      <div>
+        <div style="color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;">Navigation</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="/" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Home</a>
+          <a href="/about" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">About Us</a>
+          <a href="/services" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Services</a>
+          <a href="/contact" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;">Contact</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="tel:1300604251" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">1300 604 251</a>
+          <a href="mailto:info@kathmanduautomotive.net" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.7;">info@kathmanduautomotive.net</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="border-top: 1px solid #1a1a1a; margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; align-items: center;">
+    <p style="color: rgba(255,255,255,0.3); font-size: 13px;">© 2026 Kathmandu Automotive. All rights reserved.</p>
+    <p style="color: rgba(255,255,255,0.3); font-size: 13px;">1300 604 251</p>
+  </div>
+</footer>
+
+<style>
+  .loc-card:hover {
+    border-color: #CC1F1F !important;
+  }
+</style>
+</section>
+
+<style>
+  .service-card:hover {
+    background-color: #1a1a1a !important;
+    border-left: 3px solid #CC1F1F !important;
+    transform: translateY(-4px);
+  }
+</style>
+<script>
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Services cards stagger in
+  gsap.fromTo('.service-card',
+    { opacity: 0, y: 80 },
+    {
+      opacity: 1, y: 0,
+      duration: 0.7,
+      stagger: 0.06,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '.service-card',
+        start: 'top 80%',
+      }
+    }
+  );
+
+  // Section headings slide up
+  gsap.utils.toArray('h2').forEach((el: any) => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1, y: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 85%' }
+      }
+    );
+  });
+
+  // Why choose us points
+  gsap.utils.toArray('.value-point').forEach((el: any, i) => {
+    gsap.fromTo(el,
+      { opacity: 0, x: -40 },
+      {
+        opacity: 1, x: 0,
+        duration: 0.6,
+        delay: i * 0.12,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 85%' }
+      }
+    );
+  });
+
+  // Testimonial cards
+  gsap.fromTo('.testimonial-card',
+    { opacity: 0, y: 60, scale: 0.95 },
+    {
+      opacity: 1, y: 0, scale: 1,
+      duration: 0.7,
+      stagger: 0.15,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: '.testimonial-card', start: 'top 80%' }
+    }
+  );
+
+  // Location cards
+  gsap.fromTo('.loc-card',
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1, y: 0,
+      duration: 0.6,
+      stagger: 0.1,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: '.loc-card', start: 'top 80%' }
+    }
+  );
+
+  // Hero parallax on video
+  gsap.to('#hero video',
+    {
+      yPercent: 30,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+      }
+    }
+  );
+</script>
+</Layout>
+
+<script>
+  function animateHero() {
+    const line1 = document.getElementById('hero-line1');
+    const line2 = document.getElementById('hero-line2');
+    const sub = document.getElementById('hero-sub');
+    const scroll = document.getElementById('hero-scroll');
+
+    const animate = (el: HTMLElement, delay: number) => {
+      setTimeout(() => {
+        el.style.transition = 'transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease';
+        el.style.transform = 'translateY(0)';
+        el.style.opacity = '1';
+      }, delay);
+    };
+
+    animate(line1!, 200);
+    animate(line2!, 400);
+    animate(sub!, 800);
+    animate(scroll!, 1000);
+  }
+
+  window.addEventListener('load', animateHero);
+</script>
